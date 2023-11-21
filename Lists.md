@@ -545,3 +545,45 @@ print(result)
 ```
 
 ### Left Rotate a List
+#### Using direct method
+```
+l=l(1:)+l(0:1)
+```
+
+#### Using iterative method
+```python
+def rotateByone(l):
+    n = len(l)
+    x = l[0]
+    for i in range(1, n):
+        l[i - 1] = l[i]
+
+    l[n - 1] = x
+
+l = [10, 20, 30, 40]
+rotateByone(l)
+print(l)
+```
+
+### Question: Rotate a list by D spaces
+```
+class Solution:
+    #Function to rotate an array by d elements in counter-clockwise direction. 
+    def rotateArr(self,A,D,N):
+        #Your code here
+        D = D % N
+        temp = A[:D]
+        
+        for i in range(D, N):
+            A[i - D] = A[i]
+        
+        A[N - D:] = temp
+
+```
+
+Note: This too so many tried and so many dumb mistakes. (im on 3 hrs of sleep)
+
+### One odd occurring
+
+[article](https://practice.geeksforgeeks.org/batch/ds-with-python/track/list-basic-python/article/NjE0MQ%3D%3D)
+
